@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SecDialog</class>
+ <widget class="QDialog" name="SecDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="Add_Pushbutton">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>30</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Add new Course</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="back_pushbutton">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>450</y>
+     <width>90</width>
+     <height>90</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>undo_image</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>120</y>
+     <width>641</width>
+     <height>301</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="loadData">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>120</y>
+     <width>93</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load data</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>480</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
