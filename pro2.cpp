@@ -21,6 +21,7 @@ pro2::~pro2()
 
 void pro2::on_pushButton_clicked()
 {
+    hide();
     SecDialog secDialog;
     secDialog.setModal(true);
     secDialog.exec();
@@ -29,6 +30,7 @@ void pro2::on_pushButton_clicked()
 
 void pro2::on_pushButton_2_clicked()
 {
+    hide();
     SecDialog2 secDialog2;
     secDialog2.setModal(true);
     secDialog2.exec();

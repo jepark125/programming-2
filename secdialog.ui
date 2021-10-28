@@ -51,10 +51,10 @@
   <widget class="QTableView" name="tableView">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>60</x>
      <y>120</y>
-     <width>641</width>
-     <height>301</height>
+     <width>550</width>
+     <height>300</height>
     </rect>
    </property>
   </widget>

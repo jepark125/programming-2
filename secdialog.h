@@ -11,18 +11,6 @@ class SecDialog : public QDialog
 {
     Q_OBJECT
 
-public:
-    QSqlDatabase mydb;
-    void connClose();
-    bool connOpen(){
-        QSqlDatabase mydb = QSqlDatabase::addDatabase("QSQLITE");
-        mydb.setDatabaseName("C:/Users/junsuk/course_db.db");
-        if(!mydb.open()){
-            qDebug()<<("Failed to open the db");
-        }else
-            qDebug()<<("Connected...");
-
-    }
 
 
 public:
@@ -38,6 +26,8 @@ private slots:
 
 private:
     Ui::SecDialog *ui;
+    QSqlDatabase mydb;
+    QSqlTableModel *model;
 };
 
 #endif // SECDIALOG_H

@@ -8,10 +8,16 @@ SecDialog::SecDialog(QWidget *parent) :
     ui(new Ui::SecDialog)
 {
     ui->setupUi(this);
+    mydb = QSqlDatabase::addDatabase("QSQLITE");
+    mydb.setDatabaseName("C:/Users/junsuk/course_db.db");
     if(!mydb.open()){
         ui->label->setText("Failed to open the db");
     }else
         ui->label->setText("Connected...");
+    mydb.open();
+    model = new QSqlTableModel(this);
+    model->setTable("course_db");
+    ui->tableView->setModel(model);
 
 }
 
@@ -21,19 +27,9 @@ SecDialog::~SecDialog()
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 void SecDialog::on_Add_Pushbutton_clicked()
 {
+    hide();
     course3 course;
     course.setModal(true);
     course.exec();
@@ -42,18 +38,6 @@ void SecDialog::on_Add_Pushbutton_clicked()
 
 void SecDialog::on_loadData_clicked()
 {
-    //SecDialog conn;
-
-    //QSqlQueryModel * modal = new QSqlQueryModel();
-    //conn.connOpen();
-    //QSqlQuery qry = new QSqlQuery(conn.mydb);
-    //qry->prepare("select * from course_db");
-    //qry->exec();
-    //modal ->setQuery(*qry);
-    //ui->tableView->setModel(modal);
-    //conn.connClose();
-
-    //qDebug() >> (modal->rowCount());
-
+   model->select();
 }
 
