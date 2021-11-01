@@ -8,8 +8,18 @@ SecDialog::SecDialog(QWidget *parent) :
     ui(new Ui::SecDialog)
 {
     ui->setupUi(this);
+
+    QPixmap pix("C:/Users/zzung/Desktop/P_II/course1.png");               // change image address
+    ui->label_2->setPixmap(pix.scaled(800,800,Qt::KeepAspectRatio));
+
+    QPixmap pixmap("C:/Users/zzung/Desktop/P_II/icon_undo.png");   // change image address
+    QIcon ButtonIcon(pixmap);
+    ui->back_pushbutton->setIcon(ButtonIcon);
+    ui->back_pushbutton->setIconSize(QSize(90, 90));
+
+
     mydb = QSqlDatabase::addDatabase("QSQLITE");
-    mydb.setDatabaseName("C:/Users/junsuk/course_db.db");
+    mydb.setDatabaseName("C:/Users/zzung/course_db.db");   // change address
     if(!mydb.open()){
         ui->label->setText("Failed to open the db");
     }else

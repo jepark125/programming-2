@@ -9,8 +9,18 @@ pro2::pro2(QWidget *parent)
     , ui(new Ui::pro2)
 {
     ui->setupUi(this);
-    QPixmap pix("C:/Users/junsuk/Desktop/C++ Homework/background1.png");
-    ui->back_label->setPixmap(pix.scaled(800,800,Qt::KeepAspectRatio));
+    QPixmap pix("C:/Users/zzung/Desktop/P_II/Home.png");               // change image address
+    ui->back_label->setPixmap(pix.scaled(800,800,Qt::KeepAspectRatio));    
+
+    QPixmap pixmap("C:/Users/zzung/Desktop/P_II/icon_Students.png");   // change image address
+    QIcon ButtonIcon(pixmap);
+    ui->pushButton->setIcon(ButtonIcon);
+    ui->pushButton->setIconSize(QSize(155, 155));
+
+    QPixmap pixmap2("C:/Users/zzung/Desktop/P_II/icon_Courses.png");   // change image address
+    QIcon ButtonIcon_2(pixmap2);
+    ui->pushButton_2->setIcon(ButtonIcon_2);
+    ui->pushButton_2->setIconSize(QSize(155, 155));
 }
 
 pro2::~pro2()
